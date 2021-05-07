@@ -35,16 +35,13 @@ public class Main
 
         Main main = new Main();
 
-        int i = main.sendRequest(1828014);
-        System.out.printf("sent request " + (i == 200));
-
-//        main.rolls.stream().filter(roll -> ("" + roll).startsWith("18") && roll != 1828017).forEach(it -> {
-//            try{
-//                main.sendRequest(it);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        });
+        main.rolls.stream().filter(roll -> ("" + roll).startsWith("18") && roll != 1828017).forEach(it -> {
+            try{
+                main.sendRequest(it);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
 
     }
